@@ -37,6 +37,6 @@ public class Employee {
 
     @Override
     public String toString() {
-        return String.format("%-8s | %-12s | %1f грн", fullName, paymentType, payment);
+        return String.format("%-8s | %-12s | %.1f грн", fullName, paymentType, payment);
     }
 }

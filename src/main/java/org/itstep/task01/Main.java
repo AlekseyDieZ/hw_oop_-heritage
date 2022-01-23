@@ -40,6 +40,7 @@ public class Main {
             System.out.println(employee);
             sum += employee.getPayment();
         }
+
        System.out.println(" Итого   |              | " + sum + " грн");
     }
 }

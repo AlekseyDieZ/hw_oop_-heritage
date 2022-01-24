@@ -35,7 +35,7 @@ public class EmployeeAndTugrik extends EmployeeAndChild {
 //
     public String Exchange (String tugrikExchange) {
         TugrikExchange = 8;
-        int paymentTugrik = (int) ((getPaymentWithTax()/2)/ TugrikExchange);
+        double paymentTugrik = (int) ((getPaymentWithTax()/2)/ TugrikExchange);
         if (getPaymentType().equals("почасовая")) {
             return (getPaymentWithTax())/2 + " / " + paymentTugrik;
         } else {

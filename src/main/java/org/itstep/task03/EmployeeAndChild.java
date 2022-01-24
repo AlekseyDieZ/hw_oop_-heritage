@@ -22,6 +22,7 @@ public class EmployeeAndChild extends EmployeeAndTax {
         return hasChild;
     }
 
+
     public void setHasChild(boolean hasChild) {
         this.hasChild = hasChild;
     }

@@ -31,12 +31,16 @@ public class Employee {
         return payment;
     }
 
-    public void setPayment(double payment) {
-        this.payment = payment;
-    }
+    public double getPaymentWithTax() {
+        return payment;
 
-    @Override
-    public String toString() {
-        return String.format("%-8s | %-12s | %.1f грн", fullName, paymentType, payment);
+//    public void setPayment (double payment) {
+//        this.payment = payment;
+//    }
+
+//    @Override
+//    public String toString() {
+//            }
+//        return String.format("%-8s | %-12s | %.1f грн", getFullName(), getPayment(), getPayment(), getPaymentWithTax());
     }
 }

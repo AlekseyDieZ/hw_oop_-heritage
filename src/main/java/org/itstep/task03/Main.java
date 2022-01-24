@@ -40,7 +40,7 @@ public class Main {
         double sum = 0;
         for (Employee employee : employees) {
             System.out.println(employee);
-            sum += employee.getPayment();
+            sum += employee.getPaymentWithTax();
         }
         System.out.println(" Итого   |           |             | " + sum);
     }

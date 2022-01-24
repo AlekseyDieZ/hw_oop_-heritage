@@ -1,18 +1,15 @@
 package org.itstep.task02;
 
-import org.itstep.PaymentTypes;
+
 import org.itstep.task01.Employee;
 
-import java.net.PortUnreachableException;
-import java.security.PublicKey;
-import java.util.Scanner;
+
 
 public class EmployeeAndTax extends Employee {
     private double tax;
 
     public EmployeeAndTax(String fullName, String paymentType, double payment) {
         super(fullName, paymentType, payment);
-        //       this.tax = tax;
 
     }
 
@@ -25,25 +22,27 @@ public class EmployeeAndTax extends Employee {
         return tax;
     }
 
+    public void setTax(double tax) {
+        this.tax = tax;
+    }
+
     public void setPaymentType(String paymentType) {
-//        Scanner sc = new Scanner(System.in);
-//        String pt = sc.nextLine();
-//        System.out.println("Введите тип оплаты: ");
+
         if (paymentType.equals("почасовая")) {
             tax = 20;
         } else {
             tax = 15;
         }
-        paymentType = paymentType;
+
     }
+
+
 
     public double getPaymentWithTax() {
         double PaymentWithTax = getPayment() - (getPayment() * (tax / 100));
-        double sum = PaymentWithTax * 3;
+ //       double sum = PaymentWithTax;????
         return PaymentWithTax;
     }
-
-
 
     @Override
     public String toString() {

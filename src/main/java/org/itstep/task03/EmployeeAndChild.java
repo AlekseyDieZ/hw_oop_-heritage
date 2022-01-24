@@ -18,12 +18,34 @@ public class EmployeeAndChild extends EmployeeAndTax {
 //        super(fullName, tax, paymentType, payment);
 //    }
 
-
     public boolean isHasChild() {
         return hasChild;
     }
 
     public void setHasChild(boolean hasChild) {
         this.hasChild = hasChild;
+    }
+
+    public void setPaymentType(String paymentType) {
+
+        if (paymentType.equals("почасовая")) {
+            setTax(20);
+        } else {
+            setTax(15);
+        }
+
+        if (!hasChild) {
+            double tax = getTax() + 5;
+            setTax(tax);
+        } else {
+            getTax();
+        }
+    }
+
+
+    @Override
+    public String toString() {
+        setPaymentType(getPaymentType());
+        return String.format("%-8s | %-9s | %-10s  | %.1f ", getFullName(), getTax(), getPayment(), getPaymentWithTax());
     }
 }

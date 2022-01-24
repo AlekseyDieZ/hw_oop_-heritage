@@ -51,6 +51,7 @@ public class EmployeeAndOffshore extends EmployeeAndTugrik {
         }
     }
 
+
     @Override
     public String toString() {
         setPaymentType(getPaymentType());

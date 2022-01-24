@@ -31,8 +31,13 @@ public class Employee {
         return payment;
     }
 
+    public void setPayment(double payment) {
+        this.payment = payment;
+    }
+
     public double getPaymentWithTax() {
         return payment;
+
 
 //    public void setPayment (double payment) {
 //        this.payment = payment;
